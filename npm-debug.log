@@ -1,0 +1,477 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'xls-to-json' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 warn package.json node-todo@0.0.0 No README data
+5 verbose readDependencies using package.json deps
+6 verbose cache add [ 'xls-to-json@*', null ]
+7 verbose cache add name=undefined spec="xls-to-json@*" args=["xls-to-json@*",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: 'xls-to-json@*',
+8 verbose parsed url   path: 'xls-to-json@*',
+8 verbose parsed url   href: 'xls-to-json@*' }
+9 verbose cache add name="xls-to-json" spec="*" args=["xls-to-json","*"]
+10 verbose parsed url { protocol: null,
+10 verbose parsed url   slashes: null,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: null,
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: null,
+10 verbose parsed url   hash: null,
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: '*',
+10 verbose parsed url   path: '*',
+10 verbose parsed url   href: '*' }
+11 verbose addNamed [ 'xls-to-json', '*' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 30eca1ad-xls-to-json xls-to-json@*
+14 verbose lock xls-to-json@* /Users/skannedara/.npm/30eca1ad-xls-to-json.lock
+15 silly addNameRange { name: 'xls-to-json', range: '*', hasData: false }
+16 verbose request where is /xls-to-json
+17 verbose request registry http://registry.npmjs.org/
+18 verbose request id b20a69a08f106125
+19 verbose url raw /xls-to-json
+20 verbose url resolving [ 'http://registry.npmjs.org/', './xls-to-json' ]
+21 verbose url resolved http://registry.npmjs.org/xls-to-json
+22 verbose request where is http://registry.npmjs.org/xls-to-json
+23 info trying registry request attempt 1 at 10:25:24
+24 http GET http://registry.npmjs.org/xls-to-json
+25 http 401 http://registry.npmjs.org/xls-to-json
+26 verbose bad json <HTML><HEAD>
+26 verbose bad json <!-- Editor: Jack Mackenzie -->
+26 verbose bad json <!-- Company: FishNet Security -->
+26 verbose bad json <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+26 verbose bad json <title>: Access Denied</title>
+26 verbose bad json <style type="text/css">
+26 verbose bad json BODY {
+26 verbose bad json 	font-family : Verdana, Arial, Helvetica, sans-serif;
+26 verbose bad json 	font-size : 11pt;
+26 verbose bad json 	color : #000000;
+26 verbose bad json }
+26 verbose bad json H1 {
+26 verbose bad json 	font-family : Verdana, Arial, Helvetica, sans-serif;
+26 verbose bad json 	font-size : 12pt;
+26 verbose bad json 	font-weight : bold;
+26 verbose bad json 	color : #cc0000;
+26 verbose bad json }
+26 verbose bad json A {
+26 verbose bad json 	color : #0000cc;
+26 verbose bad json }
+26 verbose bad json A:VISITED {
+26 verbose bad json 	color : #660066;
+26 verbose bad json }
+26 verbose bad json A:HOVER {
+26 verbose bad json 	color : #cc0000;
+26 verbose bad json }
+26 verbose bad json TD.footer {
+26 verbose bad json 	font-size : 8pt;
+26 verbose bad json 	font-family : Verdana, Arial, Helvetica, sans-serif;
+26 verbose bad json 	padding : 5px 5px 5px 5px;
+26 verbose bad json 	border-top-width: 1px;
+26 verbose bad json 	border-top-style: solid;
+26 verbose bad json 	border-top-color: #A7ABA2;
+26 verbose bad json }
+26 verbose bad json .bodytext_bold {
+26 verbose bad json 	font-family : Verdana, Arial, Helvetica, sans-serif;
+26 verbose bad json 	font-size : 11pt;
+26 verbose bad json 	color : #000000;
+26 verbose bad json 	font-weight: bold;
+26 verbose bad json }
+26 verbose bad json .bodytext_small {
+26 verbose bad json 	font-family : Verdana, Arial, Helvetica, sans-serif;
+26 verbose bad json 	font-size : 9pt;
+26 verbose bad json 	color : #000000;
+26 verbose bad json }
+26 verbose bad json .detailstext {
+26 verbose bad json 	font-size: 8pt;
+26 verbose bad json 	font-family: Verdana, Arial, Helvetica, sans-serif;
+26 verbose bad json }
+26 verbose bad json .white_text {
+26 verbose bad json 	font-family: Verdana, Arial, Helvetica, sans-serif;
+26 verbose bad json 	color: #FFFFFF;
+26 verbose bad json }
+26 verbose bad json .about_text {
+26 verbose bad json 	font-family: Verdana, Arial, Helvetica, sans-serif;
+26 verbose bad json 	color: #000099;
+26 verbose bad json 	font-size: 9px;
+26 verbose bad json 	text-align:right;
+26 verbose bad json }
+26 verbose bad json </style>
+26 verbose bad json </head>
+26 verbose bad json <body bgcolor="#FFFFFF">
+26 verbose bad json <table width="100" border="0" cellspacing="0" cellpadding="0">
+26 verbose bad json   <tr>
+26 verbose bad json     <td bgcolor="#000066" class="white_text"><img src="http://portal/insitedocs/Communications/inSite/CaesarsBrands/CaesarsEnt-
+26 verbose bad json LogoColor.jpg" width=300 height=200 border=0></td>
+26 verbose bad json   </tr>
+26 verbose bad json   <tr bgcolor="#ffffff">
+26 verbose bad json     <td><img src="http://www.bluecoat.com/images/sales/spacer.gif" width=1 height=8 border=0></td>
+26 verbose bad json   </tr>
+26 verbose bad json   </table>
+26 verbose bad json <table width="720" cellpadding="15" cellspacing="0" border="0">
+26 verbose bad json   <tr>
+26 verbose bad json     <td><blockquote>
+26 verbose bad json         <h1>Access Denied</h1>
+26 verbose bad json         <p>Your credentials could not be authenticated: "Credentials are missing.". You will not be permitted access until your credentials can be verified.</p>
+26 verbose bad json <table width="720" cellpadding="0" cellspacing="0" border="0">
+26 verbose bad json   <tr>
+26 verbose bad json     <td height=1 bgcolor="#A7ABA2"><img src="http://www.bluecoat.com/images/sales/spacer.gif" width=1
+26 verbose bad json height=1 border=0></td>
+26 verbose bad json   </tr>
+26 verbose bad json </table>
+26 verbose bad json <table width="720" cellpadding="15" cellspacing="0" border="0">
+26 verbose bad json   <tr>
+26 verbose bad json     <td><blockquote>
+26 verbose bad json         <table width="600" border="0">
+26 verbose bad json           <tr class="detailstext">
+26 verbose bad json             <td width="150"><img src="http://www.bluecoat.com/images/sales/spacer.gif" width=1 height=1
+26 verbose bad json border=0></td>
+26 verbose bad json             <td width="450"><img src="http://www.bluecoat.com/images/sales/spacer.gif" width=1 height=1
+26 verbose bad json border=0></td>
+26 verbose bad json           </tr>
+26 verbose bad json           <tr class="detailstext">
+26 verbose bad json             <td width="150" class="detailstext">Source IP address:</td>
+26 verbose bad json             <td width="450" class="detailstext">10.135.202.174</td>
+26 verbose bad json </tr>
+26 verbose bad json <tr class="detailstext">
+26 verbose bad json <td width="150" class="detailstext">Hostname:</td>
+26 verbose bad json <td width="450" class=detailstext">10.135.202.174</td>
+26 verbose bad json           </tr>
+26 verbose bad json           <tr class="detailstext">
+26 verbose bad json             <td width="150" class="detailstext">Exception ID:</td>
+26 verbose bad json             <td width="450" class="detailstext">authentication_failed</td>
+26 verbose bad json           </tr>
+26 verbose bad json           <tr class="detailstext">
+26 verbose bad json             <td width="150" class="detailstext">Authenticated Username:</td>
+26 verbose bad json             <td width="450" class="detailstext"></td>
+26 verbose bad json           </tr>
+26 verbose bad json           <tr class="detailstext">
+26 verbose bad json             <td width="150">URL Requested:</td>
+26 verbose bad json             <td width="450">http://registry.npmjs.org/xls-to-json</td>
+26 verbose bad json           </tr>
+26 verbose bad json           <tr class="detailstext">
+26 verbose bad json             <td width="150">URL Category: </td>
+26 verbose bad json             <td width="450">Technology/Internet</td>
+26 verbose bad json           </tr>
+26 verbose bad json           <tr class="detailstext">
+26 verbose bad json           <td width="150">Proxy Name: </td>
+26 verbose bad json           <td width="450">entwbc01</td>
+26 verbose bad json           </tr>
+26 verbose bad json           <tr class="detailstext">
+26 verbose bad json             <td width="150">Date:</td>
+26 verbose bad json             <td width="450">2014-12-12 18:25:20</td>
+26 verbose bad json           </tr>
+26 verbose bad json         </table>
+26 verbose bad json       </blockquote></td>
+26 verbose bad json   </tr>
+26 verbose bad json </table>
+26 verbose bad json         <p class="bodytext_small">If you received this message while attempting to access an <font color="red">APPROVED</font> business related resource, please click <a href="http://help">HERE</a> to submit a Technical Support Request and paste the information below into the detailed description.</p><br>
+26 verbose bad json 		<p class="bodytext_small">If you received this message while attempting to access a <b>NEW</b> business related resource requiring business approval and I.T. change management, please click <a href="http://help">HERE</a> to submit a Technical Support Request. Within the Technical Support Request, please include an authorized request from an associated department director, a description of the business need, and the information below.</P><br>
+26 verbose bad json         <p class="bodytext_small">Note: Microsoft Internet Explorer (commonly abbreviated IE or MSIE) is the Caesars Entertainment Information Technology department&#39s approved graphical web browser. If you do not have IE installed on your computer, please contact your Local I.T. group for support.</p>
+26 verbose bad json     </blockquote></td>
+26 verbose bad json   </tr>
+26 verbose bad json </table>
+26 verbose bad json <table width="720" cellpadding="0" cellspacing="0" border="0">
+26 verbose bad json   <tr>
+26 verbose bad json     <td height=1 bgcolor="#A7ABA2"><img src="http://www.bluecoat.com/images/sales/spacer.gif" width=1
+26 verbose bad json height=1 border=0></td>
+26 verbose bad json   </tr>
+26 verbose bad json </table>
+26 verbose bad json <table width="720" cellpadding="15" cellspacing="0" border="0">
+26 verbose bad json   <tr>
+26 verbose bad json     <td><blockquote>
+26 verbose bad json         <table width="600" border="0">
+26 verbose bad json           <tr class="detailstext">
+26 verbose bad json             <td width="150"><img src="http://www.bluecoat.com/images/sales/spacer.gif" width=1 height=1
+26 verbose bad json border=0></td>
+26 verbose bad json             <td width="450"><img src="http://www.bluecoat.com/images/sales/spacer.gif" width=1 height=1
+26 verbose bad json border=0></td>
+26 verbose bad json           </tr>
+26 verbose bad json           <tr class="detailstext">
+26 verbose bad json             <td width="150" class="detailstext">Source IP address:</td>
+26 verbose bad json             <td width="450" class="detailstext">10.135.202.174</td>
+26 verbose bad json </tr>
+26 verbose bad json <tr class="detailstext">
+26 verbose bad json <td width="150" class="detailstext">Hostname:</td>
+26 verbose bad json <td width="450" class=detailstext">10.135.202.174</td>
+26 verbose bad json           </tr>
+26 verbose bad json           <tr class="detailstext">
+26 verbose bad json             <td width="150" class="detailstext">Exception ID:</td>
+26 verbose bad json             <td width="450" class="detailstext">authentication_failed</td>
+26 verbose bad json           </tr>
+26 verbose bad json           <tr class="detailstext">
+26 verbose bad json             <td width="150" class="detailstext">Authenticated Username:</td>
+26 verbose bad json             <td width="450" class="detailstext"></td>
+26 verbose bad json           </tr>
+26 verbose bad json           <tr class="detailstext">
+26 verbose bad json             <td width="150">URL Requested:</td>
+26 verbose bad json             <td width="450">http://registry.npmjs.org/xls-to-json</td>
+26 verbose bad json           </tr>
+26 verbose bad json           <tr class="detailstext">
+26 verbose bad json             <td width="150">URL Category: </td>
+26 verbose bad json             <td width="450">Technology/Internet</td>
+26 verbose bad json           </tr>
+26 verbose bad json           <tr class="detailstext">
+26 verbose bad json           <td width="150">Proxy Name: </td>
+26 verbose bad json           <td width="450">entwbc01</td>
+26 verbose bad json           </tr>
+26 verbose bad json           <tr class="detailstext">
+26 verbose bad json             <td width="150">Date:</td>
+26 verbose bad json             <td width="450">2014-12-12 18:25:20</td>
+26 verbose bad json           </tr>
+26 verbose bad json         </table>
+26 verbose bad json       </blockquote></td>
+26 verbose bad json   </tr>
+26 verbose bad json </table>
+26 verbose bad json <table cellpadding="0" cellspacing="0" class="footer" width="720">
+26 verbose bad json   <tr>
+26 verbose bad json     <td class="footer"">(C)2013 Blue Coat Systems, Inc. </td>
+26 verbose bad json   </tr>
+26 verbose bad json </table>
+26 verbose bad json </body></HTML>
+27 error registry error parsing json
+28 verbose headers { 'cache-control': 'no-cache',
+28 verbose headers   pragma: 'no-cache',
+28 verbose headers   'www-authenticate': 'NEGOTIATE, NTLM, BASIC realm="CaesarsIWA"',
+28 verbose headers   'content-type': 'text/html; charset=utf-8',
+28 verbose headers   'proxy-connection': 'close',
+28 verbose headers   'set-cookie': [ 'BCSI-CS-152fa45754f1d17c=2; Path=/' ],
+28 verbose headers   connection: 'close',
+28 verbose headers   'content-length': '7423' }
+29 silly registry.get cb [ 401,
+29 silly registry.get   { 'cache-control': 'no-cache',
+29 silly registry.get     pragma: 'no-cache',
+29 silly registry.get     'www-authenticate': 'NEGOTIATE, NTLM, BASIC realm="CaesarsIWA"',
+29 silly registry.get     'content-type': 'text/html; charset=utf-8',
+29 silly registry.get     'proxy-connection': 'close',
+29 silly registry.get     'set-cookie': [ 'BCSI-CS-152fa45754f1d17c=2; Path=/' ],
+29 silly registry.get     connection: 'close',
+29 silly registry.get     'content-length': '7423' } ]
+30 silly lockFile 30eca1ad-xls-to-json xls-to-json@*
+31 silly lockFile 30eca1ad-xls-to-json xls-to-json@*
+32 error SyntaxError: Unexpected token <
+32 error <HTML><HEAD>
+32 error <!-- Editor: Jack Mackenzie -->
+32 error <!-- Company: FishNet Security -->
+32 error <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+32 error <title>: Access Denied</title>
+32 error <style type="text/css">
+32 error BODY {
+32 error 	font-family : Verdana, Arial, Helvetica, sans-serif;
+32 error 	font-size : 11pt;
+32 error 	color : #000000;
+32 error }
+32 error H1 {
+32 error 	font-family : Verdana, Arial, Helvetica, sans-serif;
+32 error 	font-size : 12pt;
+32 error 	font-weight : bold;
+32 error 	color : #cc0000;
+32 error }
+32 error A {
+32 error 	color : #0000cc;
+32 error }
+32 error A:VISITED {
+32 error 	color : #660066;
+32 error }
+32 error A:HOVER {
+32 error 	color : #cc0000;
+32 error }
+32 error TD.footer {
+32 error 	font-size : 8pt;
+32 error 	font-family : Verdana, Arial, Helvetica, sans-serif;
+32 error 	padding : 5px 5px 5px 5px;
+32 error 	border-top-width: 1px;
+32 error 	border-top-style: solid;
+32 error 	border-top-color: #A7ABA2;
+32 error }
+32 error .bodytext_bold {
+32 error 	font-family : Verdana, Arial, Helvetica, sans-serif;
+32 error 	font-size : 11pt;
+32 error 	color : #000000;
+32 error 	font-weight: bold;
+32 error }
+32 error .bodytext_small {
+32 error 	font-family : Verdana, Arial, Helvetica, sans-serif;
+32 error 	font-size : 9pt;
+32 error 	color : #000000;
+32 error }
+32 error .detailstext {
+32 error 	font-size: 8pt;
+32 error 	font-family: Verdana, Arial, Helvetica, sans-serif;
+32 error }
+32 error .white_text {
+32 error 	font-family: Verdana, Arial, Helvetica, sans-serif;
+32 error 	color: #FFFFFF;
+32 error }
+32 error .about_text {
+32 error 	font-family: Verdana, Arial, Helvetica, sans-serif;
+32 error 	color: #000099;
+32 error 	font-size: 9px;
+32 error 	text-align:right;
+32 error }
+32 error </style>
+32 error </head>
+32 error <body bgcolor="#FFFFFF">
+32 error <table width="100" border="0" cellspacing="0" cellpadding="0">
+32 error   <tr>
+32 error     <td bgcolor="#000066" class="white_text"><img src="http://portal/insitedocs/Communications/inSite/CaesarsBrands/CaesarsEnt-
+32 error LogoColor.jpg" width=300 height=200 border=0></td>
+32 error   </tr>
+32 error   <tr bgcolor="#ffffff">
+32 error     <td><img src="http://www.bluecoat.com/images/sales/spacer.gif" width=1 height=8 border=0></td>
+32 error   </tr>
+32 error   </table>
+32 error <table width="720" cellpadding="15" cellspacing="0" border="0">
+32 error   <tr>
+32 error     <td><blockquote>
+32 error         <h1>Access Denied</h1>
+32 error         <p>Your credentials could not be authenticated: "Credentials are missing.". You will not be permitted access until your credentials can be verified.</p>
+32 error <table width="720" cellpadding="0" cellspacing="0" border="0">
+32 error   <tr>
+32 error     <td height=1 bgcolor="#A7ABA2"><img src="http://www.bluecoat.com/images/sales/spacer.gif" width=1
+32 error height=1 border=0></td>
+32 error   </tr>
+32 error </table>
+32 error <table width="720" cellpadding="15" cellspacing="0" border="0">
+32 error   <tr>
+32 error     <td><blockquote>
+32 error         <table width="600" border="0">
+32 error           <tr class="detailstext">
+32 error             <td width="150"><img src="http://www.bluecoat.com/images/sales/spacer.gif" width=1 height=1
+32 error border=0></td>
+32 error             <td width="450"><img src="http://www.bluecoat.com/images/sales/spacer.gif" width=1 height=1
+32 error border=0></td>
+32 error           </tr>
+32 error           <tr class="detailstext">
+32 error             <td width="150" class="detailstext">Source IP address:</td>
+32 error             <td width="450" class="detailstext">10.135.202.174</td>
+32 error </tr>
+32 error <tr class="detailstext">
+32 error <td width="150" class="detailstext">Hostname:</td>
+32 error <td width="450" class=detailstext">10.135.202.174</td>
+32 error           </tr>
+32 error           <tr class="detailstext">
+32 error             <td width="150" class="detailstext">Exception ID:</td>
+32 error             <td width="450" class="detailstext">authentication_failed</td>
+32 error           </tr>
+32 error           <tr class="detailstext">
+32 error             <td width="150" class="detailstext">Authenticated Username:</td>
+32 error             <td width="450" class="detailstext"></td>
+32 error           </tr>
+32 error           <tr class="detailstext">
+32 error             <td width="150">URL Requested:</td>
+32 error             <td width="450">http://registry.npmjs.org/xls-to-json</td>
+32 error           </tr>
+32 error           <tr class="detailstext">
+32 error             <td width="150">URL Category: </td>
+32 error             <td width="450">Technology/Internet</td>
+32 error           </tr>
+32 error           <tr class="detailstext">
+32 error           <td width="150">Proxy Name: </td>
+32 error           <td width="450">entwbc01</td>
+32 error           </tr>
+32 error           <tr class="detailstext">
+32 error             <td width="150">Date:</td>
+32 error             <td width="450">2014-12-12 18:25:20</td>
+32 error           </tr>
+32 error         </table>
+32 error       </blockquote></td>
+32 error   </tr>
+32 error </table>
+32 error         <p class="bodytext_small">If you received this message while attempting to access an <font color="red">APPROVED</font> business related resource, please click <a href="http://help">HERE</a> to submit a Technical Support Request and paste the information below into the detailed description.</p><br>
+32 error 		<p class="bodytext_small">If you received this message while attempting to access a <b>NEW</b> business related resource requiring business approval and I.T. change management, please click <a href="http://help">HERE</a> to submit a Technical Support Request. Within the Technical Support Request, please include an authorized request from an associated department director, a description of the business need, and the information below.</P><br>
+32 error         <p class="bodytext_small">Note: Microsoft Internet Explorer (commonly abbreviated IE or MSIE) is the Caesars Entertainment Information Technology department&#39s approved graphical web browser. If you do not have IE installed on your computer, please contact your Local I.T. group for support.</p>
+32 error     </blockquote></td>
+32 error   </tr>
+32 error </table>
+32 error <table width="720" cellpadding="0" cellspacing="0" border="0">
+32 error   <tr>
+32 error     <td height=1 bgcolor="#A7ABA2"><img src="http://www.bluecoat.com/images/sales/spacer.gif" width=1
+32 error height=1 border=0></td>
+32 error   </tr>
+32 error </table>
+32 error <table width="720" cellpadding="15" cellspacing="0" border="0">
+32 error   <tr>
+32 error     <td><blockquote>
+32 error         <table width="600" border="0">
+32 error           <tr class="detailstext">
+32 error             <td width="150"><img src="http://www.bluecoat.com/images/sales/spacer.gif" width=1 height=1
+32 error border=0></td>
+32 error             <td width="450"><img src="http://www.bluecoat.com/images/sales/spacer.gif" width=1 height=1
+32 error border=0></td>
+32 error           </tr>
+32 error           <tr class="detailstext">
+32 error             <td width="150" class="detailstext">Source IP address:</td>
+32 error             <td width="450" class="detailstext">10.135.202.174</td>
+32 error </tr>
+32 error <tr class="detailstext">
+32 error <td width="150" class="detailstext">Hostname:</td>
+32 error <td width="450" class=detailstext">10.135.202.174</td>
+32 error           </tr>
+32 error           <tr class="detailstext">
+32 error             <td width="150" class="detailstext">Exception ID:</td>
+32 error             <td width="450" class="detailstext">authentication_failed</td>
+32 error           </tr>
+32 error           <tr class="detailstext">
+32 error             <td width="150" class="detailstext">Authenticated Username:</td>
+32 error             <td width="450" class="detailstext"></td>
+32 error           </tr>
+32 error           <tr class="detailstext">
+32 error             <td width="150">URL Requested:</td>
+32 error             <td width="450">http://registry.npmjs.org/xls-to-json</td>
+32 error           </tr>
+32 error           <tr class="detailstext">
+32 error             <td width="150">URL Category: </td>
+32 error             <td width="450">Technology/Internet</td>
+32 error           </tr>
+32 error           <tr class="detailstext">
+32 error           <td width="150">Proxy Name: </td>
+32 error           <td width="450">entwbc01</td>
+32 error           </tr>
+32 error           <tr class="detailstext">
+32 error             <td width="150">Date:</td>
+32 error             <td width="450">2014-12-12 18:25:20</td>
+32 error           </tr>
+32 error         </table>
+32 error       </blockquote></td>
+32 error   </tr>
+32 error </table>
+32 error <table cellpadding="0" cellspacing="0" class="footer" width="720">
+32 error   <tr>
+32 error     <td class="footer"">(C)2013 Blue Coat Systems, Inc. </td>
+32 error   </tr>
+32 error </table>
+32 error </body></HTML>
+32 error
+32 error
+32 error
+32 error
+32 error     at Object.parse (native)
+32 error     at RegClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:274:23)
+32 error     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:246:65)
+32 error     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:236:22)
+32 error     at Request.emit (events.js:98:17)
+32 error     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1142:14)
+32 error     at Request.emit (events.js:117:20)
+32 error     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1096:12)
+32 error     at IncomingMessage.emit (events.js:117:20)
+32 error     at _stream_readable.js:943:16
+33 error If you need help, you may report this *entire* log,
+33 error including the npm and node versions, at:
+33 error     <http://github.com/npm/npm/issues>
+34 error System Darwin 14.0.0
+35 error command "node" "/usr/local/bin/npm" "install" "xls-to-json"
+36 error cwd /Users/skannedara/Documents/MyProject/Alkamai_Text_Process
+37 error node -v v0.10.32
+38 error npm -v 1.4.28
+39 error type unexpected_token
+40 verbose exit [ 1, true ]

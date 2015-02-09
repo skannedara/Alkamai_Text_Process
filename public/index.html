@@ -1,0 +1,422 @@
+<!doctype html>
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="scotchTodo">
+<head>
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+	<title>AlchemyAPI API Test</title>
+
+	<!-- SCROLLS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css"><!-- load bootstrap -->
+	<link rel="stylesheet" href="css/alchemicss.css"><!-- load bootstrap -->
+
+	<!-- SPELLS -->
+	<script src="js/angular.min.js"></script><!-- load angular -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/core.js"></script>
+
+</head>
+<!-- SET THE CONTROLLER AND GET ALL TODOS WITH INITIALIZE FUNCTION -->
+<body ng-controller="mainController">
+	<div class="container">
+		<!-- FORM TO CREATE TODOS -->
+		<div id="todo-form" class="row">
+			<div class="col-sm-9 col-sm-offset-2 text-center">
+				<h1 class="pageHeadding">Caesars App: Text processing using AlchemyAPI</h1>
+				<form>
+				    <div class="input-group" id="textEntry">
+				      <input id="searchinput" type="text" class="form-control input-lg text-center" placeholder="Enter Text or URL to process" ng-model="formData.text">
+				      <span class="input-group-btn">
+				        <button type="submit" class="btn btn-primary btn-lg" ng-click="createTodo()">Submit</button>
+				      </span>
+				    </div><!-- /input-group -->
+				</form>
+			</div>
+		</div>
+
+		<!-- Alchamai API List for Text-->
+		<div class="container" ng-show="showResultsText">
+			<div class="row">
+				<!--<ul class="nav nav-tabs tablistPage" role="tablist">
+				  <li role="presentation" class="active"><a href="#">jSON</a></li>
+				  <li role="presentation"><a href="#">Visual</a></li>
+				</ul>-->
+		        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bhoechie-tab-container">
+			          <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 bhoechie-tab-menu">
+		              <div class="list-group">
+		                <a href="#" class="list-group-item active text-center entitySel" >Entity Extraction</a>
+		                <a href="#" class="list-group-item text-center">Text Extraction</a>
+		                <a href="#" class="list-group-item text-center">Keyword Extraction</a>
+		                <a href="#" class="list-group-item text-center">Concept Tagging</a>
+		                <a href="#" class="list-group-item text-center">Sentiment Analysis</a>
+		                <a href="#" class="list-group-item text-center">Language Detection</a>
+		                <a href="#" class="list-group-item text-center">Relation Extraction</a>
+		                <a href="#" class="list-group-item text-center">Text Categorization</a>
+		                <a href="#" class="list-group-item text-center">Author Extraction</a>
+		                <a href="#" class="list-group-item text-center">Title Extraction</a>
+		                <a href="#" class="list-group-item text-center">Feed Detection</a>
+		                <a href="#" class="list-group-item text-center">Microformats Parsing</a>
+		                <a href="#" class="list-group-item text-center">Taxonomy Parsing</a>
+		                <a href="#" class="list-group-item text-center">Image Parsing</a>
+		                <a href="#" class="list-group-item text-center">Image Keywords Tagging</a>
+		                <!--<a href="#" class="list-group-item text-center">Combined Parsing</a>-->
+		              </div>
+		            </div>
+		          	<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 bhoechie-tab">
+		                <div class="bhoechie-tab-content" ng-bind-html='entitiesJson'></div>
+		                <div class="bhoechie-tab-content" ng-bind-html='textJson'></div>
+		                <div class="bhoechie-tab-content" ng-bind-html='keywordsJson'></div>
+		                <div class="bhoechie-tab-content" ng-bind-html='conceptsJson'></div>
+		                <div class="bhoechie-tab-content" ng-bind-html='sentimentJson'></div>
+		                <div class="bhoechie-tab-content" ng-bind-html='languageJson'></div>
+		                <div class="bhoechie-tab-content" ng-bind-html='relationsJson'></div>
+		                <div class="bhoechie-tab-content" ng-bind-html='categoryJson'></div>
+		                <div class="bhoechie-tab-content" ng-bind-html='authorJson'></div>
+		                <div class="bhoechie-tab-content" ng-bind-html='titleJson'></div>
+		                <div class="bhoechie-tab-content" ng-bind-html='feedsJson'></div>
+		                <div class="bhoechie-tab-content" ng-bind-html='microformatsJson'></div>
+		                <div class="bhoechie-tab-content" ng-bind-html='taxonomyJson'></div>
+		                <div class="bhoechie-tab-content" ng-bind-html='imageJson'></div>
+		                <div class="bhoechie-tab-content" ng-bind-html='image_keywordsJson'></div>
+		                <!--<div class="bhoechie-tab-content" ng-bind-html='combined'></div>-->
+		                <div class="bhoechie-tab-content-visual">
+						    <table class="table table-striped table-bordered">
+						      <thead>
+						        <tr>
+						          <th sortable-header col="entity" data-width="15%">Entity</th>
+						          <th sortable-header col="relevance" data-width="15%">Relevance</th>
+						          <th sortable-header col="sentiment" data-width="15%">Sentiment</th>
+						          <th sortable-header col="type" data-width="15%">Type</th>
+						          <th sortable-header col="subtypes" data-width="25%">Subtypes</th>
+						          <th sortable-header col="linked_data" data-width="15%">Linked Data</th>
+						        </tr>
+						      </thead>
+						      <tbody>
+						        <tr data-ng-repeat="entity in entities">
+						          <td>{{entity.text}}</td>
+						          <td>{{entity.relevance}}</td>
+						          <td>{{entity.sentiment.type}}</td>
+						          <td>{{entity.type}}</td>
+						          <td>{{entity.disambiguated.subType}}</td>
+						          <td>{{entity.disambiguated.name}}</td>
+						        </tr>
+						      </tbody>
+						    </table>
+		                </div>
+		                <div class="bhoechie-tab-content-visual">
+						    <table class="table table-striped table-bordered">
+						      <thead>
+						        <tr>
+						          <th sortable-header col="text" data-width="15%">Text</th>
+						        </tr>
+						      </thead>
+						      <tbody>
+						        <tr>
+						          <td>{{text.text}}</td>
+							    </tr>
+						      </tbody>
+						    </table>
+		                </div>
+		                <div class="bhoechie-tab-content-visual">
+						    <table class="table table-striped table-bordered">
+						      <thead>
+						        <tr>
+						          <th sortable-header col="keyword" data-width="15%">Keyword</th>
+						          <th sortable-header col="relevance" data-width="15%">Relevance</th>
+						          <th sortable-header col="sentiment" data-width="15%">Sentiment</th>
+						        </tr>
+						      </thead>
+						      <tbody>
+						        <tr data-ng-repeat="keyword in keywords">
+						          <td>{{keyword.text}}</td>
+						          <td>{{keyword.relevance}}</td>
+						          <td>{{keyword.sentiment.type}}</td>
+						        </tr>
+						      </tbody>
+						    </table>
+		                </div>
+		                <div class="bhoechie-tab-content-visual">
+						    <table class="table table-striped table-bordered">
+						      <thead>
+						        <tr>
+						          <th sortable-header col="concept" data-width="15%">Concept</th>
+						          <th sortable-header col="relevance" data-width="15%">Relevance</th>
+						          <th sortable-header col="linked_data" data-width="15%">Linked Data</th>
+						        </tr>
+						      </thead>
+						      <tbody>
+						        <tr data-ng-repeat="concept in concepts">
+						          <td>{{concept.text}}</td>
+						          <td>{{concept.relevance}}</td>
+						          <td>{{concept.disambiguated.name}}</td>
+						        </tr>
+						      </tbody>
+						    </table>
+		                </div>
+		                <div class="bhoechie-tab-content-visual">
+						    <table class="table table-striped table-bordered">
+						      <thead>
+						        <tr>
+						          <th sortable-header col="sentiment" data-width="15%">Sentiment</th>
+						          <th sortable-header col="score" data-width="15%">Score</th>
+						        </tr>
+						      </thead>
+						      <tbody>
+						        <tr>
+						          <td>{{sentiment.type}}</td>
+						          <td>{{sentiment.score}}</td>
+							    </tr>
+						      </tbody>
+						    </table>
+		                </div>
+		                <div class="bhoechie-tab-content-visual">
+						    <table class="table table-striped table-bordered">
+						      <thead>
+						        <tr>
+						          <th sortable-header col="language" data-width="15%">Language</th>
+						          <th sortable-header col="native_speakers" data-width="15%">Native Speakers</th>
+						          <th sortable-header col="ethnologue" data-width="15%">Ethnologue</th>
+						          <th sortable-header col="wikipedia" data-width="15%">Wikipedia</th>
+						        </tr>
+						      </thead>
+						      <tbody>
+						        <tr>
+						          <td>{{language.language}}</td>
+						          <td>{{language.native-speakers}}</td>
+						          <td>{{language.ethnologue}}</td>
+						          <td>{{language.wikipedia}}</td>
+							    </tr>
+						      </tbody>
+						    </table>
+		                </div>
+		                <div class="bhoechie-tab-content-visual">
+						    <table class="table table-striped table-bordered">
+						      <thead>
+						        <tr>
+						          <th sortable-header col="sentence" data-width="15%">Sentence</th>
+						          <th sortable-header col="relevance" data-width="15%">Subject text</th>
+						          <th sortable-header col="linked_data" data-width="15%">Subject entities</th>
+						          <th sortable-header col="linked_data" data-width="15%">Subject keywords</th>
+						          <th sortable-header col="linked_data" data-width="15%">Action text</th>
+						          <th sortable-header col="linked_data" data-width="15%">Action lemmatized</th>
+						          <th sortable-header col="linked_data" data-width="15%">Action verb text</th>
+						          <th sortable-header col="linked_data" data-width="15%">Action verb tense</th>
+						          <th sortable-header col="linked_data" data-width="15%">Object text</th>
+						          <th sortable-header col="linked_data" data-width="15%">Sentiment From Subject type</th>
+						          <th sortable-header col="linked_data" data-width="15%">Sentiment From Subject score</th>
+						          <th sortable-header col="linked_data" data-width="15%">Location</th>
+						        </tr>
+						      </thead>
+						      <tbody>
+						        <tr data-ng-repeat="relation in relations">
+						          <td>{{relation.sentence}}</td>
+						          <td>{{relation.subject.text}}</td>
+						          <td>
+						          	<span data-ng-repeat="entitiy1 in relation.subject.entities">
+						          		{{entitiy1.type}}, {{entitiy1.text}}
+						          	</span><br/>
+						          </td>
+						          <td>
+						          	<span data-ng-repeat="keywor1 in relation.subject.keywords">
+						          		{{keywor1.type}}|
+						          	</span><br/>
+						          </td>
+						          <td>{{relation.action.text}}</td>
+						          <td>{{relation.action.lemmatized}}</td>
+						          <td>{{relation.action.verb.text}}</td>
+						          <td>{{relation.action.verb.tense}}</td>
+						          <td>{{relation.object.text}}</td>
+						          <td>{{relation.object.sentimentFromSubject.type}}</td>
+						          <td>{{relation.object.sentimentFromSubject.score}}</td>
+						          <td>{{relation.location.text}}</td>
+						        </tr>
+						      </tbody>
+						    </table>
+		                </div>
+		                <div class="bhoechie-tab-content-visual">
+						    <table class="table table-striped table-bordered">
+						      <thead>
+						        <tr>
+						          <th sortable-header col="language" data-width="15%">Language</th>
+						          <th sortable-header col="category" data-width="15%">Category</th>
+						          <th sortable-header col="score" data-width="15%">Score</th>
+						        </tr>
+						      </thead>
+						      <tbody>
+						        <tr>
+						          <td>{{category.language}}</td>
+						          <td>{{category.category}}</td>
+						          <td>{{category.score}}</td>
+							    </tr>
+						      </tbody>
+						    </table>
+		                </div>
+		                <div class="bhoechie-tab-content-visual">
+						    <table class="table table-striped table-bordered">
+						      <thead>
+						        <tr>
+						          <th sortable-header col="author" data-width="15%">Author</th>
+						        </tr>
+						      </thead>
+						      <tbody>
+						        <tr>
+						          <td>{{author.author}}</td>
+							    </tr>
+						      </tbody>
+						    </table>
+		                </div>
+		                <div class="bhoechie-tab-content-visual">
+						    <table class="table table-striped table-bordered">
+						      <thead>
+						        <tr>
+						          <th sortable-header col="title" data-width="15%">Title</th>
+						        </tr>
+						      </thead>
+						      <tbody>
+						        <tr>
+						          <td>{{title.title}}</td>
+							    </tr>
+						      </tbody>
+						    </table>
+		                </div>
+		                <div class="bhoechie-tab-content-visual">
+						    <table class="table table-striped table-bordered">
+						      <thead>
+						        <tr>
+						          <th sortable-header col="feed" data-width="15%">Feed</th>
+						        </tr>
+						      </thead>
+						      <tbody>
+						        <tr data-ng-repeat="feed in feeds">
+						          <td>{{feed.feed}}</td>
+							    </tr>
+						      </tbody>
+						    </table>
+		                </div>
+		                <div class="bhoechie-tab-content-visual">
+						    <table class="table table-striped table-bordered">
+						      <thead>
+						        <tr>
+						          <th sortable-header col="microformats" data-width="15%">Microformats</th>
+						        </tr>
+						      </thead>
+						      <tbody>
+						        <tr>
+						          <td>{{microformats}}</td>
+							    </tr>
+						      </tbody>
+						    </table>
+		                </div>
+		                <div class="bhoechie-tab-content-visual">
+						    <table class="table table-striped table-bordered">
+						      <thead>
+						        <tr>
+						          <th sortable-header col="label" data-width="15%">Label</th>
+						          <th sortable-header col="score" data-width="15%">Score</th>
+						          <th sortable-header col="confident" data-width="15%">Confident?</th>
+						        </tr>
+						      </thead>
+						      <tbody>
+						        <tr data-ng-repeat="taxon in taxonomy">
+						          <td>{{taxon.label}}</td>
+						          <td>{{taxon.score}}</td>
+						          <td>{{taxon.confident}}</td>
+						        </tr>
+						      </tbody>
+						    </table>
+		                </div>
+		                <div class="bhoechie-tab-content-visual">
+						    <table class="table table-striped table-bordered">
+						      <thead>
+						        <tr>
+						          <th sortable-header col="image" data-width="15%">Image</th>
+						        </tr>
+						      </thead>
+						      <tbody>
+						        <tr>
+						          <td>{{image}}</td>
+						        </tr>
+						      </tbody>
+						    </table>
+		                </div>
+		                <div class="bhoechie-tab-content-visual">
+						    <table class="table table-striped table-bordered">
+						      <thead>
+						        <tr>
+						          <th sortable-header col="image_keywords" data-width="15%">Image Keywords</th>
+						        </tr>
+						      </thead>
+						      <tbody>
+						        <tr>
+						          <td>{{image_keywords}}</td>
+						        </tr>
+						      </tbody>
+						    </table>
+		                </div>
+		            </div>
+		        </div>
+		  </div>
+		</div>
+		  <img src="/images/sgo-loading.gif" class="img-responsive" ng-show="showProgress" alt="Responsive image">
+		<br/>
+		<br/>
+	</div>
+  <div class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+      <p class="navbar-text pull-left">© 2014 Caesars License Company, LLC. All Rights Reserved.
+      </p>
+      
+      <a href="http://localhost:10028/" class="navbar-btn btn-danger btn pull-right" target="_blank">
+      <span class="glyphicon glyphicon-star"></span>  Check Face Detection App here</a>
+    </div>
+    
+    
+  </div>
+
+</body>
+<script>
+var myApp,
+	selectViewIndex = 0,
+	selectTabIndex = 0;
+
+$(document).ready(function() {
+    $("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
+        e.preventDefault();
+        $(this).siblings('a.active').removeClass("active");
+        $(this).addClass("active");
+        /*selectTabIndex = $(this).index();
+    	if(selectViewIndex == 1){
+    		$("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active"); 
+	        $("div.bhoechie-tab>div.bhoechie-tab-content-visual").removeClass("active");
+	        $("div.bhoechie-tab>div.bhoechie-tab-content-visual").eq(selectTabIndex).addClass("active");
+		} else {
+	        $("div.bhoechie-tab>div.bhoechie-tab-content-visual").removeClass("active");
+	        $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+	        $("div.bhoechie-tab>div.bhoechie-tab-content").eq(selectTabIndex).addClass("active");
+		}*/
+		var index = $(this).index();
+        $("div.bhoechie-tab>div.bhoechie-tab-content-visual").removeClass("active");
+        $("div.bhoechie-tab>div.bhoechie-tab-content-visual").eq(index).addClass("active");
+    });
+   $("ul.tablistPage>li").click(function(e) {
+    	e.preventDefault();
+    	$(this).siblings('.active').removeClass("active");
+    	$(this).addClass("active");
+    	selectViewIndex = $(this).index();
+    	if(selectViewIndex == 1){
+    		$("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+	        $("div.bhoechie-tab>div.bhoechie-tab-content-visual").removeClass("active");
+	        $("div.bhoechie-tab>div.bhoechie-tab-content-visual").eq(selectTabIndex).addClass("active");
+		} else {
+	        $("div.bhoechie-tab>div.bhoechie-tab-content-visual").removeClass("active");
+	        $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+	        $("div.bhoechie-tab>div.bhoechie-tab-content").eq(selectTabIndex).addClass("active");
+		}
+    });
+});
+</script>
+</html>
